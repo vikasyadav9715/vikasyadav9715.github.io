@@ -1,0 +1,17 @@
+<!-- css/style.css -->
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+  font-weight: 600;
+}
+
+.card {
+  margin-bottom: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0 10px;
+}
