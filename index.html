@@ -4,12 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vikas Yadav | Data Scientist</title>
+  <title>Your Name | Data Scientist</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    :root {
+      --primary-color: rgba(0, 128, 111, 0.781); /* wine red with transparency */
+      --secondary-color: #ffffff; /* black */
+      --text-light: #121212;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      background-color: var(--secondary-color);
+      color: var(--text-light);
+      position: relative;
+    }
+    .bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+    .navbar {
+      background-color: var(--secondary-color);
+    }
+    .navbar-brand, .nav-link {
+      color: var(--text-light) !important;
+    }
+    header {
+      background-color: var(--primary-color);
+    }
+    .card {
+      background-color: #fdfdfd;
+      color: var(--text-light);
+      border: 1px solid rgba(128, 0, 32, 0.85);
+    }
+    .btn-outline-primary {
+      border-color: rgba(128, 0, 32, 0.85);
+      color: rgba(128, 0, 32, 0.85);
+    }
+    .btn-outline-primary:hover {
+      background-color: rgba(128, 0, 32, 0.85);
+      color: var(--text-light);
+    }
+    footer {
+      background-color: var(--secondary-color);
+      color: var(--text-light);
+    }
+    footer a {
+      color: var(--text-light);
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <video autoplay muted loop class="bg-video">
+    <source src="video/blackhole.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html">Vikas Yadav</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -22,11 +84,11 @@
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-      </div>  
+      </div>
     </div>
   </nav>
 
-  <header class="bg-primary text-white text-center py-5 bg-violet">
+  <header class="text-white text-center py-5">
     <div class="container">
       <h1 class="display-4">Hi, I'm Vikas Yadav</h1>
       <p class="lead">Senior Data Analyst | Python | SQL | Machine Learning | Forecasting</p>
@@ -46,36 +108,37 @@
           </div>
         </div>
       </div>
+
       <div class="col-md-4">
         <div class="card">
           <img src="img/project2.jpg" class="card-img-top" alt="Project 2">
           <div class="card-body">
             <h5 class="card-title">Twitter Data Extraction and Analysis</h5>
-            <p class="card-text">Built a framework to extract data from Twitter and analyze the underlying patterns in user behavior using python.</p>
-            <a href="https://github.com/yourgithub/project2" class="btn btn-outline-primary" target="_blank">View Project</a>
+            <p class="card-text">Fetched tweets containing a specific keyword and performed sentiment analysis using NLP techniques.</p>
+            <a href="https://github.com/yourgithub/twitter-analysis" class="btn btn-outline-primary" target="_blank">View Project</a>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
         <div class="card">
-          <img src="img/project2.jpg" class="card-img-top" alt="Project 3">
+          <img src="img/project3.jpg" class="card-img-top" alt="Project 3">
           <div class="card-body">
-            <h5 class="card-title">Resume Parser</h5>
-            <p class="card-text">Built a framework to extract data from different resume files and analyze the synergies of the candidate's skill with different job requirements using python.</p>
-            <a href="https://github.com/yourgithub/project3" class="btn btn-outline-primary" target="_blank">View Project</a>
+            <h5 class="card-title">Instagram Marketing Automation</h5>
+            <p class="card-text">Developed a tool to automatically follow users and send them personalized marketing messages.</p>
+            <a href="https://github.com/yourgithub/instagram-marketing" class="btn btn-outline-primary" target="_blank">View Project</a>
           </div>
         </div>
       </div>
-      <!-- Repeat for more projects -->
+
     </div>
   </section>
 
-  <footer class="bg-dark text-white text-center py-3">
+  <footer class="text-center py-3">
     <p>&copy; 2025 Vikas Yadav</p>
     <p>
-      <a href="https://www.linkedin.com/in/yourprofile" class="text-white">LinkedIn</a> |
-      <a href="https://github.com/yourgithub" class="text-white">GitHub</a>
+      <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> |
+      <a href="https://github.com/yourgithub">GitHub</a>
     </p>
   </footer>
 
