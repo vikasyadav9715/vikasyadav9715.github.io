@@ -1,188 +1,116 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name | Data Scientist</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Vic</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    :root {
-      --primary-color: rgba(128, 0, 32, 0.85); /* wine red with transparency */
-      --secondary-color: #000000; /* black */
-      --text-light: #ffffff;
+    .project-3d {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      perspective: 1000px;
+      margin-top: 2rem;
     }
-    
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow-x: hidden;
+
+    .tile-3d {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg) rotateX(0deg);
     }
-    body {
-      background-color: var(--secondary-color);
-      color: var(--text-light);
-      position: relative;
-      z-index: 0;
+
+    .tile-3d:hover {
+      transform: rotateY(5deg) rotateX(5deg) scale(1.03);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
     }
-    .bg-video-container {
+
+    .bg-video {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      z-index: -1;
-    }
-    .bg-video-container video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.5;
-    }
-    .navbar {
-      background-color: var(--secondary-color);
-    }
-    .navbar-brand, .nav-link {
-      color: var(--text-light) !important;
-    }
-    header {
-      background-color: var(--primary-color);
-    }
-    .card {
-      background-color: #1c1c1c;
-      color: var(--text-light);
-      border: 1px solid rgba(128, 0, 32, 0.85);
-    }
-    .btn-outline-primary {
-      border-color: rgba(128, 0, 32, 0.85);
-      color: rgba(128, 0, 32, 0.85);
-    }
-    .btn-outline-primary:hover {
-      background-color: rgba(128, 0, 32, 0.85);
-      color: var(--text-light);
-    }
-    footer {
-      background-color: var(--secondary-color);
-      color: var(--text-light);
-    }
-    footer a {
-      color: var(--text-light);
-    }
-    .toolkit img {
-      width: 60px;
-      height: auto;
+      z-index: -1;
+      opacity: 0.25;
+      pointer-events: none;
+      filter: brightness(1.05) contrast(1.1);
     }
   </style>
 </head>
 <body>
-  <div class="bg-video-container">
-    <video autoplay muted loop>
-      <source src="videos/galaxy.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-  </div>
+  <video autoplay loop muted class="bg-video">
+    <source src="background-light1.mp4" type="video/mp4" />
+  </video>
+  <main class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="toolkit.html">Toolkit</a></li>
+      </ul>
+    </nav>
 
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Vikas Yadav</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <section class="content" style="background-color: rgba(255, 255, 255, 0.7);">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Hello, I'm <strong>Vic</strong> — a Data Analyst with 9+ years of experience in Python, SQL, and Machine Learning. I specialize in transforming raw data into actionable insights and decision-support tools that empower businesses.</p>
+      <p>This website showcases my professional background, skill set, project highlights, and the toolkit I use daily to bring data to life. Feel free to explore each section to learn more.</p>
+    </section>
 
-  <header class="text-white text-center py-5">
-    <div class="container">
-      <h3 class="display-4">Hi, I'm Vikas</h3>
-      <p class="lead">I'm a results-driven Senior Data Analyst with over 9 years of experience. I get straight to the point, whether it's building predictive models, wrangling complex datasets, crafting dashboards, or automating data flows. If you're looking for someone who knows their way around Python, SQL, and data strategy — I'm your person.</p>
-    </div>
-  </header>
+    <section class="content" style="background-color: rgba(255, 255, 255, 0.7);">
+      <h2>Work Experience</h2>
+      <ul class="skills-list">
+        <li>Senior Data Analyst - XYZ Corp (2020–Present)</li>
+        <li>Data Analyst - ABC Ltd (2015–2020)</li>
+      </ul>
+    </section>
 
-  <section class="container my-5">
-    <h2 class="text-center">My Toolkit</h2>
-    <div class="row text-center toolkit">
-      <div class="col-md-2 col-4 mb-4">
-        <img src="img/python.png" class="img-fluid" alt="Python" width = "150">
-      </div>
-      <div class="col-md-2 col-4 mb-4">
-        <img src="img/sql.jpg" class="img-fluid" alt="SQL">
-      </div>
-      <div class="col-md-2 col-4 mb-4">
-        <img src="img/googlesheet.png" class="img-fluid" alt="Google Sheets">
-      </div>
-      <div class="col-md-2 col-4 mb-4">
-        <img src="img/mstr.png" class="img-fluid" alt="MicroStrategy">
-      </div>
-      <div class="col-md-2 col-4 mb-4">
-        <img src="img/presto.png" class="img-fluid" alt="Presto">
-      </div>
-      <div class="col-md-2 col-4 mb-4">
-        <img src="img/databricks.png" class="img-fluid" alt="Databricks">
-      </div>
-      <div class="col-md-2 col-4 mb-4">
-        <img src="img/microsoftoffice.jpg" class="img-fluid" alt="Microsoft Office">
-      </div>
-      <!-- Add more tools as needed -->
-    </div>
-  </section>
+    <section class="content" style="background-color: rgba(255, 255, 255, 0.7);">
+      <h2>Key Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Excel</li>
+        <li>Machine Learning</li>
+        <li>Data Visualization</li>
+      </ul>
+    </section>
 
-  <section class="container my-5">
-    <h2 class="text-center">Featured Projects</h2>
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="img/delivery.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Forecast Seller Delivery Time</h5>
-            <p class="card-text">Built a time series model to predict delivery time by seller & country using Python and Prophet.</p>
-            <a href="https://github.com/yourgithub/project1" class="btn btn-outline-primary" target="_blank">View Project</a>
-          </div>
+    <section class="content" style="background-color: rgba(255, 255, 255, 0.7);">
+      <h2>Toolkit</h2>
+      <ul class="toolkit-list">
+        <li>VSCode</li>
+        <li>Jupyter Notebook</li>
+        <li>Tableau</li>
+        <li>PowerBI</li>
+        <li>Pandas</li>
+      </ul>
+    </section>
+
+    <section class="content" style="background-color: rgba(255, 255, 255, 0.7);">
+      <h2>Highlighted Projects</h2>
+      <div class="project-3d">
+        <div class="tile-3d" style="background-color: rgba(255, 255, 255, 0.6);">
+          <h3>Sales Forecasting</h3>
+          <p>Used time series analysis to predict monthly sales across various regional segments.</p>
+        </div>
+        <div class="tile-3d" style="background-color: rgba(255, 255, 255, 0.6);">
+          <h3>Customer Segmentation</h3>
+          <p>Clustered customer behavior data using unsupervised learning to improve marketing strategies.</p>
         </div>
       </div>
+    </section>
 
-      <div class="col-md-4">
-        <div class="card">
-          <img src="img/twitter.jpg" class="card-img-top" alt="Project 2">
-          <div class="card-body">
-            <h5 class="card-title">Twitter Data Extraction and Analysis</h5>
-            <p class="card-text">Fetched tweets containing a specific keyword and performed sentiment analysis using NLP techniques.</p>
-            <a href="https://github.com/yourgithub/twitter-analysis" class="btn btn-outline-primary" target="_blank">View Project</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="img/instagram.jpg" class="card-img-top" alt="Project 3">
-          <div class="card-body">
-            <h5 class="card-title">Instagram Marketing Automation</h5>
-            <p class="card-text">Developed a tool to automatically follow users and send them personalized marketing messages.</p>
-            <a href="https://github.com/yourgithub/instagram-marketing" class="btn btn-outline-primary" target="_blank">View Project</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <footer class="text-center py-3">
-    <p>&copy; 2025 Vikas Yadav</p>
-    <p>
-      <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> |
-      <a href="https://github.com/yourgithub">GitHub</a>
-    </p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer>
+      <p>&copy; 2025 Vic. All rights reserved.</p>
+    </footer>
+  </main>
 </body>
 </html>

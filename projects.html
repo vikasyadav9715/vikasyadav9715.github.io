@@ -1,38 +1,38 @@
-<!-- projects.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects | Your Name</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Vic</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Your Name</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+  <main class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="toolkit.html">Toolkit</a></li>
+      </ul>
+    </nav>
+    <section class="content">
+      <h1>Projects</h1>
+      <div class="cards">
+        <div class="card">
+          <h2>Sales Forecasting</h2>
+          <p>Used time series analysis to forecast monthly sales for different product categories across regions.</p>
+        </div>
+        <div class="card">
+          <h2>Customer Segmentation</h2>
+          <p>Implemented unsupervised learning techniques to identify customer segments and tailor marketing strategies.</p>
+        </div>
       </div>
-    </div>
-  </nav>
-
-  <main class="container my-5">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Forecast Seller Delivery Time:</strong> Time series model using Prophet and LightGBM to predict seller delivery time based on country and category.</li>
-      <li><strong>Customer Segmentation:</strong> Used clustering techniques (KMeans, DBSCAN) to segment retail customers based on purchasing behavior.</li>
-      <li><strong>Churn Prediction:</strong> Classification model to identify customers at risk of leaving using logistic regression and XGBoost.</li>
-    </ul>
+    </section>
+    <footer>
+      <p>&copy; 2025 Vic. All rights reserved.</p>
+    </footer>
   </main>
-
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 Your Name</p>
-  </footer>
 </body>
 </html>
